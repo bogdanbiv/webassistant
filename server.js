@@ -12,4 +12,5 @@ expressApp.use(express.static(__dirname + '/public'))
   // App routes create an Express middleware
   .use(require('./hello').router());
 
-server.listen(3000);
+server.listen(process.env.PORT, process.env.IP);
+console.log(process.env.IP + ":" + process.env.PORT)
